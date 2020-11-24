@@ -10,7 +10,7 @@ except ValueError:
 	sys.exit()
 
 if s > e:
-	print("Cannot generate list: s > e")
+	print(f"Cannot generate list from {s} to {e}")
 	sys.exit()
 
 l = list(range(s,e+1))
