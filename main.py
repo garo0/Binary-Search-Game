@@ -11,15 +11,16 @@ except ValueError:
 
 if s > e:
 	print("Cannot generate list: s > e")
-
+	sys.exit()
 
 l = list(range(s,e+1))
 
-print(f"Which number would you like to serach from {s} to {e}")
+print(f"Which number would you like to search from {s} to {e}")
 try:
 	n = int(input("Number: "))
 except ValueError:
 	print("Number must be type: int")
+	sys.exit()
 
 index = 0
 t = time.time()
@@ -34,5 +35,5 @@ while len(l) != 1:
 
 dt = time.time()-t
 
-print(f"Your number is in the index: {index}")
+print(f"Your number is in the index: {index} of the list between {s} and {e}")
 print(f"Operation took: {dt}s")
